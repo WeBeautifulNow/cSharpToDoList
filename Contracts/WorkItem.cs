@@ -12,6 +12,8 @@ namespace ToDoList.Contracts
     }
     public class WorkItem
     {
+        public static string GetPartitionKey(Guid uniqueId) => uniqueId.ToString().Substring(0, 2);
+
         public WorkItem()
         {
             this.UniqueIdentifier = new Guid();

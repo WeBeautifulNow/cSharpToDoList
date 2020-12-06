@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.Extensions.Configuration;
-using System.Collections;
+using System;
 
 namespace ToDoList.Storage.Repositories.WorkItems
 {
@@ -39,6 +39,12 @@ namespace ToDoList.Storage.Repositories.WorkItems
             }
 
             return results;
+        }
+
+        public async Task<WorkItem> GetWorkItem(Guid workItemId)
+        {
+            var result = await _container.ReadItemAsync<WorkItem>(workItemId.ToString(), new PartitionKey(WorkItem.GetPartitionKey(workItemId)));
+            return result;
         }
     }
 }

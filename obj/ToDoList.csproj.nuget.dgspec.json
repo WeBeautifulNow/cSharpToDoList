@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\mine\\code\\C#\\ToDoList\\ToDoList.csproj": {}
+    "C:\\mine\\mycode\\cSharp\\cSharpToDoList\\ToDoList.csproj": {}
   },
   "projects": {
-    "C:\\mine\\code\\C#\\ToDoList\\ToDoList.csproj": {
+    "C:\\mine\\mycode\\cSharp\\cSharpToDoList\\ToDoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\mine\\code\\C#\\ToDoList\\ToDoList.csproj",
+        "projectUniqueName": "C:\\mine\\mycode\\cSharp\\cSharpToDoList\\ToDoList.csproj",
         "projectName": "ToDoList",
-        "projectPath": "C:\\mine\\code\\C#\\ToDoList\\ToDoList.csproj",
+        "projectPath": "C:\\mine\\mycode\\cSharp\\cSharpToDoList\\ToDoList.csproj",
         "packagesPath": "C:\\Users\\zheta\\.nuget\\packages\\",
-        "outputPath": "C:\\mine\\code\\C#\\ToDoList\\obj\\",
+        "outputPath": "C:\\mine\\mycode\\cSharp\\cSharpToDoList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -46,10 +46,6 @@
             "Microsoft.Azure.Cosmos": {
               "target": "Package",
               "version": "[3.15.0, )"
-            },
-            "SimpleInjector": {
-              "target": "Package",
-              "version": "[5.1.0, )"
             }
           },
           "imports": [

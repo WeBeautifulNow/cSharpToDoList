@@ -17,6 +17,7 @@ namespace ToDoList.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IWorkItemRepository _workItemRepository;
+
         public HomeController(ILogger<HomeController> logger, IWorkItemRepository workItemRepository)
         {
             _logger = logger;
@@ -35,7 +36,19 @@ namespace ToDoList.Controllers
             catch (Exception exception)
             {
                 _logger.LogError(exception.ToString());
-                return BadRequest($"Get tenant error");
+            }
+        }
+
+        public async Task<ActionResult<WorkItem>> getWorkItem(Guid workItemId)
+        {
+            try
+            {
+                var workItem = await _workItemRepository.GetWorkItem(workItemId);
+                return Ok(workItem);
+            }
+            catch (Exception exception)
+            {
+                _logger.LogError(exception.ToString());
             }
         }
 
